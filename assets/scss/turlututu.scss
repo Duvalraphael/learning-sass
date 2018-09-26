@@ -1,0 +1,196 @@
+//SCSS//
+//Mixin//
+@mixin button($color) {
+    background-color: $color;
+    padding: 15px;
+    font-size: 20px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 12px;
+}
+@mixin  buttom {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 15px;    
+}
+@mixin navbar {
+    max-width: 1140px;
+    margin: auto;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 16px;
+}
+@mixin ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    list-style-type: none;
+}
+@mixin lia {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+//Variables//
+$topnav: darkslategrey;
+$banner1: rgb(39, 151, 189);
+$banner2: white;
+$partner: lightgray;
+$botnav:  black;
+/*fin scss debut css*/
+*{
+    box-sizing: border-box;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica,sans-serif;
+}
+/* COLOR BACK ST */
+.grey {
+   background-color:  $topnav;
+}
+.blue {
+    background-color: $banner1;
+
+}
+.white {
+    background-color:  $banner2;
+}
+.lightgrey{
+    background-color: $partner;
+}
+.black {
+    background-color: $botnav;
+}
+/* COLOR BACK END*/
+/* NAVBAR Start */
+.topnav{
+   @include navbar();
+}
+.topul {
+   @include ul();
+}
+li a{
+   @include lia();
+}
+.login {
+    text-decoration: none;
+    color: white;
+}
+
+/* NAVBAR END */ 
+/* HEADER Start */
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    .imgperso{
+        width: (100/3)*100%;
+             }
+    .textheader {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        color: white;
+        margin: auto;
+        padding: auto;
+        font-size: 20px;
+        width: (100/3)*100%;
+                }
+    .empty{
+        width: (100/3)*100%;
+          }
+         }
+/* BUTTON TOP */
+.buttop {
+    @include button(orange);
+    margin: 0;
+    text-align: center;
+        }
+
+/* HEADER END */
+/* MAIN St */
+main{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    h2 {
+        text-align: center;
+        margin: 0;
+        line-height: 2;
+        
+    }
+}
+.title_for {
+    margin: auto;
+}
+.content{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 1140px;
+    color: white;
+}
+.text {
+    width: 50%;
+    font-size: 16px;
+}
+.title_ino {
+    color: lightslategray;
+    margin: auto ;
+}
+.parterns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.sizeparterns {
+    display: flex;
+    width:  15%;
+    margin: 30px;
+    padding: 10px;
+    font-size: 100px;
+}
+/* BUTTON BOTTOM */
+.buttonbott{
+    @include buttom();
+    .button2{
+        @include button(blue);
+            }
+    .button3{
+        @include button(blue);
+            }
+    .button4{
+        @include button(orange);
+            }
+}
+    
+/*MAIN END*/
+/*FOOTER NAV ST */
+.bottomnav /*nav*/{
+    @include navbar();
+                  }
+.botul /*ul*/{
+        @include ul();
+            }
+li a{
+    @include lia();
+             }
+.copyright {
+        display: flex;
+        align-self: flex-end;
+        text-decoration: none;
+        color: white;
+        padding-left: 300px;
+                }
+/*FOOTER NAV END */
